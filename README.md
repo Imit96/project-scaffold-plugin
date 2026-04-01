@@ -18,7 +18,7 @@ A cross-platform AI agent plugin that interviews you about your project, then ge
 To install from the **Imit Dev Plugins** hub, first register it as a source in your agent CLI:
 
 ```
-/plugin marketplace add Imit96/project-scaffold-plugin
+/plugin marketplace add Imit96/imit-dev-plugins
 ```
 
 Then install the desired plugin from this marketplace (e.g., Project Scaffold):
@@ -48,7 +48,7 @@ Or search for "project-scaffold" in the plugin marketplace.
 Tell Codex:
 
 ```
-Fetch and follow instructions from https://raw.githubusercontent.com/Imit96/project-scaffold-plugin/main/.codex/INSTALL.md
+Fetch and follow instructions from https://raw.githubusercontent.com/Imit96/imit-dev-plugins/main/.codex/INSTALL.md
 ```
 
 ### OpenCode
@@ -56,20 +56,20 @@ Fetch and follow instructions from https://raw.githubusercontent.com/Imit96/proj
 Tell OpenCode:
 
 ```
-Fetch and follow instructions from https://raw.githubusercontent.com/Imit96/project-scaffold-plugin/main/.opencode/INSTALL.md
+Fetch and follow instructions from https://raw.githubusercontent.com/Imit96/imit-dev-plugins/main/.opencode/INSTALL.md
 ```
 
 ### GitHub Copilot CLI
 
 ```
-copilot plugin marketplace add Imit96/project-scaffold-plugin
+copilot plugin marketplace add Imit96/imit-dev-plugins
 copilot plugin install project-scaffold@project-scaffold-marketplace
 ```
 
 ### Gemini CLI
 
 ```
-gemini extensions install https://github.com/Imit96/project-scaffold-plugin
+gemini extensions install https://github.com/Imit96/imit-dev-plugins
 ```
 
 To update:
@@ -81,7 +81,7 @@ gemini extensions update project-scaffold
 ### Google Antigravity
 
 ```bash
-git clone https://github.com/Imit96/project-scaffold-plugin.git /tmp/psp
+git clone https://github.com/Imit96/imit-dev-plugins.git /tmp/psp
 mkdir -p ~/.gemini/antigravity/skills
 cp -r /tmp/psp/skills/project-scaffold ~/.gemini/antigravity/skills/
 rm -rf /tmp/psp
@@ -94,7 +94,7 @@ Download the `skills/project-scaffold/` folder, zip it, and upload via **Setting
 ### Manual Install (any platform)
 
 ```bash
-git clone https://github.com/Imit96/project-scaffold-plugin.git /tmp/psp
+git clone https://github.com/Imit96/imit-dev-plugins.git /tmp/psp
 
 # Claude Code
 mkdir -p ~/.claude/skills
@@ -129,7 +129,7 @@ ln -s ~/.claude/skills/project-scaffold .agents/skills/project-scaffold
 ### Using skills.sh (Universal Package Manager)
 
 ```bash
-npx skills add Imit96/project-scaffold-plugin
+npx skills add Imit96/imit-dev-plugins
 ```
 
 ---
@@ -315,4 +315,4 @@ Please open an issue first to discuss what you'd like to change.
 
 ---
 
-Built by [Imit](https://github.com/Imit96) · Issues: [github.com/Imit96/project-scaffold-plugin/issues](https://github.com/Imit96/project-scaffold-plugin/issues)
+Built by [Imit](https://github.com/Imit96) · Issues: [github.com/Imit96/imit-dev-plugins/issues](https://github.com/Imit96/imit-dev-plugins/issues)

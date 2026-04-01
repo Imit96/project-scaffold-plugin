@@ -5,7 +5,7 @@
   "author": {
     "name": "Imit"
   },
-  "homepage": "https://github.com/Imit96/project-scaffold-plugin",
+  "homepage": "https://github.com/Imit96/imit-dev-plugins",
   "license": "MIT",
   "skills": [
     "./skills/project-scaffold"
