@@ -1,0 +1,13 @@
+{
+  "name": "project-scaffold",
+  "version": "1.0.0",
+  "description": "Generate all AI-agent config files for any full-stack project. 9-phase system: interviews first, then creates CLAUDE.md, rules, agents, skills, commands, progress tracking, best practices coaching, and completion awareness.",
+  "author": {
+    "name": "Imit"
+  },
+  "homepage": "https://github.com/Imit96/project-scaffold-plugin",
+  "license": "MIT",
+  "skills": [
+    "./skills/project-scaffold"
+  ]
+}
