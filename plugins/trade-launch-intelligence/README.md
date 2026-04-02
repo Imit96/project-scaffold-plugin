@@ -2,7 +2,7 @@
 
 > **A complete business launch intelligence skill for Claude AI** — turns any product idea (or no idea at all) into a full, investor-ready advisory package for entrepreneurs and traders anywhere in the world.
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/yourusername/trade-launch-intelligence/releases)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/Imit96/imit-dev-plugins/tree/main/plugins/trade-launch-intelligence/releases)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Compatible](https://img.shields.io/badge/Claude-claude.ai%20Skills-purple.svg)](https://claude.ai)
 [![Coverage](https://img.shields.io/badge/countries-50%2B-orange.svg)](#global-coverage)
@@ -96,7 +96,7 @@ Built-in version control for business plans that evolve:
 ### Installation
 
 **Method 1: Direct Install (Recommended)**
-1. Download the latest `.skill` file from [Releases](https://github.com/yourusername/trade-launch-intelligence/releases)
+1. Download the latest `.skill` file from the [Releases](https://github.com/Imit96/imit-dev-plugins/tree/main/plugins/trade-launch-intelligence/releases)
 2. Open [Claude.ai](https://claude.ai)
 3. Go to **Settings → Skills → Install Skill**
 4. Upload the `.skill` file
@@ -104,8 +104,8 @@ Built-in version control for business plans that evolve:
 
 **Method 2: Build from Source**
 ```bash
-git clone https://github.com/yourusername/trade-launch-intelligence.git
-cd trade-launch-intelligence
+git clone https://github.com/Imit96/imit-dev-plugins.git
+cd imit-dev-plugins/plugins/trade-launch-intelligence
 bash install.sh
 ```
 
@@ -246,7 +246,7 @@ Free to use, modify, and distribute. Attribution appreciated.
 
 ## Author
 
-Built by [Your Name] using Claude AI's skill system.
+Built by **Imit** using Claude AI's skill system.
 
 **Skill name:** `trade-launch-intelligence`
 **Compatible with:** Claude.ai (claude-sonnet-4-6, claude-opus-4-6)

@@ -1,0 +1,129 @@
+# 🏗️ Project Scaffold — AI Agent Config Generator
+
+**Generate all AI-agent config files for any full-stack project — in one go.**
+
+A cross-platform AI agent skill that interviews you about your project, then generates a complete set of `CLAUDE.md`, rules, agents, skills, commands, progress tracking, and reference docs. Every file is self-updating, every agent asks before assuming, and the system tracks what's done, what's next, and when to stop.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Compatible](https://img.shields.io/badge/Claude-claude.ai%20Skills-purple.svg)](https://claude.ai)
+
+---
+
+## What It Does
+
+Describe your project → the skill interviews you → generates everything:
+
+```
+.claude/
+├── rules/           # code-style, testing, security, git-conventions
+├── agents/          # code-reviewer, test-writer, debugger, architect
+├── skills/          # new-feature, new-endpoint, new-component
+└── commands/        # /new-feature, /fix-bug, /deploy-check, /status, /review
+docs/agent/
+├── architecture.md, database-schema.md, api-patterns.md
+├── workflows.md, testing-strategy.md, deployment.md
+└── progress.md      # living progress tracker
+CLAUDE.md            # core memory — lean, <300 lines, self-updating
+```
+
+---
+
+## The 9 Phases
+
+| Phase | What Happens |
+|-------|-------------|
+| **1. Discovery Interview** | Asks structured questions — never assumes stack or conventions |
+| **2. File Generation** | Creates all config files in one batch |
+| **3. Self-Updating Docs** | Every file has `<!-- UPDATE_WHEN -->` markers and changelogs |
+| **4. Sub-Agents** | Code-reviewer, test-writer, debugger, architect — with tool access |
+| **5. Ask-Don't-Assume** | Clarification protocol baked into every agent and CLAUDE.md |
+| **6. Next Step Engine** | Suggests 2-3 prioritized next actions after every task |
+| **7. Progress Tracking** | Milestones, task log, decisions, tech debt, open questions |
+| **8. Best Practices & Coaching** | Contextual coaching + knows when to stop |
+| **9. /status & /review** | Instant project health check and review checkpoints |
+
+---
+
+## Key Features
+
+### 🎯 Interview First, Generate Second
+The skill never assumes your stack. It asks tiered questions (Must Know → Should Know → Nice to Know) and blocks file generation until the essentials are gathered. If you've already described your project in conversation, it extracts what it can and confirms.
+
+### 📊 Progress Tracking
+A living `docs/agent/progress.md` tracks milestones customized to your project type:
+
+| Project Type | Example Milestones |
+|-------------|-------------------|
+| SaaS / Dashboard | Auth, core API, user management, billing, testing, deploy |
+| E-commerce | Product catalog, cart, checkout, payment, order management |
+| API-only | Resource endpoints, validation, rate limiting, API docs |
+| Content Platform | CMS, media upload, publishing workflow, search |
+| Portfolio Site | Layout, content sections, contact form, SEO, analytics |
+| Mobile Backend | Auth with device management, push notifications, real-time |
+
+Updated after every task. Read at the start of every session.
+
+### 💡 Best Practices Coaching
+20+ contextual suggestions across Security, Performance, Quality, Reliability, and Developer Experience — each with a specific trigger condition. Maximum one per task. Always skippable.
+
+### ✅ Completion Awareness
+Three levels of "done":
+- **Task-level** → Stop, confirm, offer enhancements as options (not defaults)
+- **Feature-level** → Suggest review checkpoint before next feature
+- **Project-level** → Launch readiness summary when all milestones are complete
+
+Anti-overbuilding rules prevent gold-plating, premature optimization, and feature creep.
+
+### 🔄 Self-Updating Documents
+Every generated file includes:
+- `<!-- UPDATE_WHEN: condition -->` markers at key decision points
+- Changelog table at the bottom
+- Instructions in CLAUDE.md for the agent to scan for affected docs after every task
+
+---
+
+## Usage
+
+### Trigger Phrases
+
+Just describe your project naturally:
+
+> "I'm building a SaaS dashboard with Next.js, Prisma, and PostgreSQL. Generate the docs."
+
+Or be explicit:
+
+> "Use the project-scaffold skill to set up agent config."
+
+Other triggers: "scaffold the project", "create the MD files", "set up Claude Code config", "generate the docs"
+
+### After Setup
+
+| Command | What It Does |
+|---------|-------------|
+| `/status` | Project health: milestones, last task, next step, tech debt |
+| `/review` | Feature/milestone review checkpoint with code-reviewer agent |
+| `/new-feature` | Full implementation workflow with planning and testing |
+| `/fix-bug` | Structured debugging protocol |
+| `/deploy-check` | Pre-deployment verification checklist |
+
+---
+
+## Installation
+
+```bash
+# Register the marketplace
+/plugin marketplace add Imit96/imit-dev-plugins
+
+# Install the skill
+/plugin install project-scaffold@imit-dev-plugins
+```
+
+---
+
+## License
+
+[MIT](../../LICENSE)
+
+---
+
+Built by **Imit** using Claude AI's skill system.

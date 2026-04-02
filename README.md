@@ -1,8 +1,8 @@
 # 🏗️ Imit Dev Plugins Hub
 
-**Generate all AI-agent config files for any full-stack project — in one go.**
+**High-performance AI agent tools for developers and entrepreneurs.**
 
-A cross-platform AI agent plugin that interviews you about your project, then generates a complete set of CLAUDE.md, rules, agents, skills, commands, progress tracking, and reference docs. Every file is self-updating, every agent asks before assuming, and the system tracks what's done, what's next, and when to stop.
+A collection of cross-platform AI agent plugins designed to streamline development and business intelligence. Register once, install any plugin from the suite, and get more out of your agent-based workflows.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-Plugin-blueviolet)](https://code.claude.com/docs/en/skills)
@@ -10,314 +10,89 @@ A cross-platform AI agent plugin that interviews you about your project, then ge
 
 ---
 
+## Featured Plugins
+
+| Plugin | Description | Documentation |
+|--------|-------------|---------------|
+| `project-scaffold` | **Full-Stack Project Initialization.** Interviews you about your project, then generates a complete set of `CLAUDE.md`, rules, agents, skills, and progress tracking. | [README](plugins/project-scaffold/README.md) |
+| `trade-launch-intelligence` | **Global Trade Advisory.** Professional business launch advisory for traders and exporters. Produces market research, financial projections, and compliance guides. | [README](plugins/trade-launch-intelligence/README.md) |
+
+---
+
 ## Installation
 
-> [!IMPORTANT]
-> **Where to run commands:** Commands starting with `/` (like `/plugin`) must be typed directly into your **Agent's CLI Chat interface**, not your computer's terminal (zsh/bash).
+### 🔴 Quick Start (Claude Code)
 
-To install from the **Imit Dev Plugins** hub, first register it as a source in your agent CLI:
+To install from the **Imit Dev Plugins** hub, first register it as a marketplace in your agent CLI:
 
-```
+```bash
 /plugin marketplace add Imit96/imit-dev-plugins
 ```
 
-Then install a plugin from this hub:
+Then install any plugin:
 
 ```bash
-# Project Scaffold
+# To scaffold a project
 /plugin install project-scaffold@imit-dev-plugins
 
-# Trade Launch Intelligence
+# For trade/business advisory
 /plugin install trade-launch-intelligence@imit-dev-plugins
 ```
 
-To update:
-
-```
-/plugin update project-scaffold
-```
-
-### Cursor (via Plugin Marketplace)
-
-In Cursor Agent chat, install from marketplace:
-
-```
-/add-plugin project-scaffold
-```
-
-Or search for "project-scaffold" in the plugin marketplace.
-
-### OpenAI Codex
-
-Tell Codex:
-
-```
-Fetch and follow instructions from https://raw.githubusercontent.com/Imit96/imit-dev-plugins/main/.codex/INSTALL.md
-```
-
-### OpenCode
-
-Tell OpenCode:
-
-```
-Fetch and follow instructions from https://raw.githubusercontent.com/Imit96/imit-dev-plugins/main/.opencode/INSTALL.md
-```
-
-### GitHub Copilot CLI
-
-```
-copilot plugin marketplace add Imit96/imit-dev-plugins
-copilot plugin install project-scaffold@project-scaffold-marketplace
-```
-
-### Gemini CLI
-
-```
-gemini extensions install https://github.com/Imit96/imit-dev-plugins
-```
-
-To update:
-
-```
-gemini extensions update project-scaffold
-```
-
-### Google Antigravity
+### ⚡ Cursor Agent & Agent Skills CLI
+Use the universal installer for any plugin in the hub:
 
 ```bash
-git clone https://github.com/Imit96/imit-dev-plugins.git /tmp/psp
-mkdir -p ~/.gemini/antigravity/skills
-cp -r /tmp/psp/skills/project-scaffold ~/.gemini/antigravity/skills/
-rm -rf /tmp/psp
-```
-
-### Claude.ai / Cowork
-
-Download the `skills/project-scaffold/` folder, zip it, and upload via **Settings → Customize → Skills**.
-
-### Manual Install (any platform)
-
-```bash
-git clone https://github.com/Imit96/imit-dev-plugins.git /tmp/psp
-
-# Claude Code
-mkdir -p ~/.claude/skills
-cp -r /tmp/psp/skills/project-scaffold ~/.claude/skills/
-
-# OpenAI Codex CLI
-mkdir -p ~/.codex/skills
-cp -r /tmp/psp/skills/project-scaffold ~/.codex/skills/
-
-# Cursor / VS Code / GitHub Copilot
-mkdir -p .agents/skills
-cp -r /tmp/psp/skills/project-scaffold .agents/skills/
-
-# Clean up
-rm -rf /tmp/psp
-```
-
-### Symlink for Multi-Tool Usage
-
-Install once, use everywhere:
-
-```bash
-# Install to Claude Code first
-mkdir -p ~/.claude/skills
-cp -r skills/project-scaffold ~/.claude/skills/
-
-# Then symlink to other tools
-ln -s ~/.claude/skills/project-scaffold ~/.codex/skills/project-scaffold
-ln -s ~/.claude/skills/project-scaffold .agents/skills/project-scaffold
-```
-
-### Using skills.sh (Universal Package Manager)
-
-```bash
-npx skills add Imit96/imit-dev-plugins
+npx skills add Imit96/imit-dev-plugins/[plugin-name]
 ```
 
 ---
 
-## Supported Platforms
+## Hub Architecture
 
-This skill follows the [Agent Skills open standard](https://agentskills.io) — write once, use everywhere.
-
-| Platform | Status |
-|----------|--------|
-| Claude Code | ✅ Full plugin + marketplace support |
-| Claude.ai / Cowork | ✅ Upload as custom skill |
-| OpenAI Codex CLI | ✅ Native Agent Skills support |
-| Cursor | ✅ Native plugin support |
-| VS Code | ✅ Agent Skills extension |
-| GitHub Copilot | ✅ Native support |
-| Google Antigravity | ✅ Native Agent Skills support |
-| Gemini CLI | ✅ Native support |
-| JetBrains Junie | ✅ Native support |
-| Windsurf | ✅ Compatible |
-| Amp | ✅ Compatible |
-| OpenCode | ✅ Compatible |
-| Goose (Block) | ✅ Compatible |
-| Roo Code | ✅ Compatible |
-| Mistral Vibe | ✅ Compatible |
-
----
-
-## What It Does
-
-Describe your project → the skill interviews you → generates everything:
-
-```
-.claude/
-├── rules/           # code-style, testing, security, git-conventions
-├── agents/          # code-reviewer, test-writer, debugger, architect
-├── skills/          # new-feature, new-endpoint, new-component
-└── commands/        # /new-feature, /fix-bug, /deploy-check, /status, /review
-docs/agent/
-├── architecture.md, database-schema.md, api-patterns.md
-├── workflows.md, testing-strategy.md, deployment.md
-└── progress.md      # living progress tracker
-CLAUDE.md            # core memory — lean, <300 lines, self-updating
-```
-
----
-
-## The 9 Phases
-
-| Phase | What Happens |
-|-------|-------------|
-| **1. Discovery Interview** | Asks structured questions — never assumes stack or conventions |
-| **2. File Generation** | Creates all config files in one batch |
-| **3. Self-Updating Docs** | Every file has `<!-- UPDATE_WHEN -->` markers and changelogs |
-| **4. Sub-Agents** | Code-reviewer, test-writer, debugger, architect — with tool access |
-| **5. Ask-Don't-Assume** | Clarification protocol baked into every agent and CLAUDE.md |
-| **6. Next Step Engine** | Suggests 2-3 prioritized next actions after every task |
-| **7. Progress Tracking** | Milestones, task log, decisions, tech debt, open questions |
-| **8. Best Practices & Completion** | Contextual coaching + knows when to stop |
-| **9. /status & /review** | Instant project health check and review checkpoints |
-
----
-
-## Key Features
-
-### 🎯 Interview First, Generate Second
-The skill never assumes your stack. It asks tiered questions (Must Know → Should Know → Nice to Know) and blocks file generation until the essentials are gathered. If you've already described your project in conversation, it extracts what it can and confirms.
-
-### 📊 Progress Tracking
-A living `docs/agent/progress.md` tracks milestones customized to your project type:
-
-| Project Type | Example Milestones |
-|-------------|-------------------|
-| SaaS / Dashboard | Auth, core API, user management, billing, testing, deploy |
-| E-commerce | Product catalog, cart, checkout, payment, order management |
-| API-only | Resource endpoints, validation, rate limiting, API docs |
-| Content Platform | CMS, media upload, publishing workflow, search |
-| Portfolio Site | Layout, content sections, contact form, SEO, analytics |
-| Mobile Backend | Auth with device management, push notifications, real-time |
-
-Updated after every task. Read at the start of every session.
-
-### 💡 Best Practices Coaching
-20+ contextual suggestions across Security, Performance, Quality, Reliability, and Developer Experience — each with a specific trigger condition. Maximum one per task. Always skippable.
-
-```
-💡 Suggestion: Add rate limiting to auth endpoints
-   Why now: Auth endpoints are the #1 target for automated attacks
-   Effort: Low
-   Skip?: Totally fine to defer. Say "skip" and I'll log it as tech debt.
-```
-
-### ✅ Completion Awareness
-Three levels of "done":
-- **Task-level** → Stop, confirm, offer enhancements as options (not defaults)
-- **Feature-level** → Suggest review checkpoint before next feature
-- **Project-level** → Launch readiness summary when all milestones are complete
-
-Anti-overbuilding rules prevent gold-plating, premature optimization, and feature creep.
-
-### 🔄 Self-Updating Documents
-Every generated file includes:
-- `<!-- UPDATE_WHEN: condition -->` markers at key decision points
-- Changelog table at the bottom
-- Instructions in CLAUDE.md for the agent to scan for affected docs after every task
-
----
-
-## Usage
-
-### Trigger Phrases
-
-Just describe your project naturally:
-
-> "I'm building a SaaS dashboard with Next.js, Prisma, and PostgreSQL. Generate the docs."
-
-Or be explicit:
-
-> "Use the project-scaffold skill to set up agent config."
-
-Other triggers: "scaffold the project", "create the MD files", "set up Claude Code config", "generate the docs"
-
-### After Setup
-
-| Command | What It Does |
-|---------|-------------|
-| `/status` | Project health: milestones, last task, next step, tech debt |
-| `/review` | Feature/milestone review checkpoint with code-reviewer agent |
-| `/new-feature` | Full implementation workflow with planning and testing |
-| `/fix-bug` | Structured debugging protocol |
-| `/deploy-check` | Pre-deployment verification checklist |
-
-Skills update automatically when you update the plugin:
-
-```
-/plugin update project-scaffold
-```
-
----
-
-## Plugin Structure
+The hub is designed for modularity and cross-platform compatibility. Each plugin contains its own manifests, reference library, and orchestration skills.
 
 ```
 imit-dev-plugins/
-├── .claude-plugin/
-│   └── marketplace.json                  # Central hub catalog
+├── .claude-plugin/                     # Central Hub Manifest
+│   └── marketplace.json                # Global Catalog
 ├── plugins/
-│   ├── project-scaffold/                 # Plugin 1: Project Scaffolding
-│   └── trade-launch-intelligence/        # Plugin 2: Global Trade Advisory
-│       ├── .claude-plugin/
-│       │   └── plugin.json               # Plugin-specific manifest
-│       ├── .codex/                       # Codex instructions
-│       ├── .opencode/                    # OpenCode instructions
-│       ├── skills/
-│       │   └── trade-launch-intelligence/ # Main skill
-│       │       ├── SKILL.md
-│       │       ├── agents/
-│       │       └── references/
-│       ├── AGENTS.md                     # Cross-platform discovery
-│       ├── CHANGELOG.md
-│       └── LICENSE
-├── .gitignore
-└── README.md                             # Hub index & instructions
+│   ├── project-scaffold/               # Plugin 1: Project Scaffolding
+│   │   ├── .claude-plugin/plugin.json  # Specific Manifest
+│   │   ├── skills/                     # Skill Logic
+│   │   └── README.md
+│   └── trade-launch-intelligence/      # Plugin 2: Global Trade Advisory
+│       ├── .claude-plugin/plugin.json  # Specific Manifest
+│       ├── skills/                     # Reference Library & Logic
+│       └── README.md
+└── README.md                           # This Hub Landing Page
 ```
 
 ---
 
-## Contributing
+## Platform Support
 
-Contributions welcome! Some ideas:
+Following the [Agent Skills open standard](https://agentskills.io), these plugins work across all major AI agent platforms.
 
-- **New milestone patterns** — Add patterns for game dev, ML pipelines, browser extensions, etc.
-- **New best practice triggers** — Add suggestions for frameworks you use
-- **Stack-specific templates** — Add specialized templates for Django, Rails, Flutter, etc.
-- **Translations** — Localize templates for non-English teams
+| Platform | Support |
+|----------|---------|
+| **Claude Code** | ✅ Full marketplace + auto-update support |
+| **Claude.ai** | ✅ Upload skill via zip/folder |
+| **Cursor Agent** | ✅ Marketplace discovery |
+| **VS Code (Agent)** | ✅ Native skill support |
+| **Gemini CLI** | ✅ Native extension support |
+| **GitHub Copilot** | ✅ Full compatibility |
 
-Please open an issue first to discuss what you'd like to change.
+---
+
+## Author 
+
+Built by **Imit** ([Imit96](https://github.com/Imit96))
+
+**Issues & Requests:** [github.com/Imit96/imit-dev-plugins/issues](https://github.com/Imit96/imit-dev-plugins/issues)
 
 ---
 
 ## License
 
 [MIT](LICENSE)
-
----
-
-Built by [Imit](https://github.com/Imit96) · Issues: [github.com/Imit96/imit-dev-plugins/issues](https://github.com/Imit96/imit-dev-plugins/issues)
