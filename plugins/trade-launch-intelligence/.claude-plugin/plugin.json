@@ -1,0 +1,13 @@
+{
+  "name": "trade-launch-intelligence",
+  "version": "1.0.0",
+  "description": "Complete business launch intelligence for traders and exporters worldwide. Produces a 13-document advisory package covering market research, strategy, financial modelling, compliance, sourcing, risk assessment, and outreach materials.",
+  "author": {
+    "name": "Imit"
+  },
+  "homepage": "https://github.com/Imit96/imit-dev-plugins/tree/main/plugins/trade-launch-intelligence",
+  "license": "MIT",
+  "skills": [
+    "./skills/trade-launch-intelligence"
+  ]
+}

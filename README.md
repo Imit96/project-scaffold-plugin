@@ -21,10 +21,14 @@ To install from the **Imit Dev Plugins** hub, first register it as a source in y
 /plugin marketplace add Imit96/imit-dev-plugins
 ```
 
-Then install the desired plugin from this marketplace (e.g., Project Scaffold):
+Then install a plugin from this hub:
 
-```
+```bash
+# Project Scaffold
 /plugin install project-scaffold@imit-dev-plugins
+
+# Trade Launch Intelligence
+/plugin install trade-launch-intelligence@imit-dev-plugins
 ```
 
 To update:
@@ -277,13 +281,14 @@ imit-dev-plugins/
 ├── .claude-plugin/
 │   └── marketplace.json                  # Central hub catalog
 ├── plugins/
-│   └── project-scaffold/                 # First plugin
+│   ├── project-scaffold/                 # Plugin 1: Project Scaffolding
+│   └── trade-launch-intelligence/        # Plugin 2: Global Trade Advisory
 │       ├── .claude-plugin/
 │       │   └── plugin.json               # Plugin-specific manifest
 │       ├── .codex/                       # Codex instructions
 │       ├── .opencode/                    # OpenCode instructions
 │       ├── skills/
-│       │   └── project-scaffold/         # Main skill
+│       │   └── trade-launch-intelligence/ # Main skill
 │       │       ├── SKILL.md
 │       │       ├── agents/
 │       │       └── references/
